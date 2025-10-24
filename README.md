@@ -35,6 +35,7 @@
 ## 3. Fork e criando repositório no GitHub
 ### 3.1. Fork do repositório oficial
 - Acesse o repositório [microservices-demo](https://github.com/GoogleCloudPlatform/microservices-demo)
+- Clique em **_fork_** e em seguida **_Create fork_**.
 
 ### 3.2. Criando repositório no GitHub
 - Vá até seu perfil no GitHub, clique em **_Repositories_** e **_New_**.
@@ -44,6 +45,38 @@
 
 > [!IMPORTANT]
 > A visibilidade do repositório deve estar como **_public_**, caso contrário, os próximos passos não funcionarão corretamente.
+
+- Abra o Git bash em sua máquina, clone e abra o repositório criado.
+- Para clonar clique em **_Code_** no repositório criado, copie a URL e rode o comando:
+
+```
+git clone https://github.com/<SEU-USUARIO>/<SEU-REPOSITÓRIO>.git
+```
+
+- Com o repositório aberto em um editor de texto ou IDE de sua preferência, crie a seguinte estrutura de pastas e arquivos:
+
+```bash
+seu-repositório/
+├── k8s/
+     ├── online-boutique.yml
+```
+
+![Estrutura pastas](https://github.com/user-attachments/assets/ad4e28b7-074a-43fb-88a5-50ef28664717)
+
+- Acesse o arquivo [kubernetes-manifests.yaml](https://github.com/GoogleCloudPlatform/microservices-demo/blob/main/release/kubernetes-manifests.yaml) e copie **todo** o conteúdo para o seu arquivo **online-boutique.yml**
+- Salve todas as alterações e envie para o seu repositório com os seguintes comandos:
+
+```
+git add .
+```
+
+```
+git commit -m "Initial commit"
+```
+
+```
+git push origin main
+```
 
 ## 4. Instalando ArgoCD no Cluster local
 - Com o Rancher Desktop devidamente instalado e rodando, abra o Git bash e digite os seguintes comandos:
@@ -208,7 +241,7 @@ cat argocd-deploy-key
 
 ![Exemplo status](https://github.com/user-attachments/assets/02ff445a-7235-4873-884c-ad889a0d8626)
 
-- Agora, basta criar um app utilizando o mesmo template utilizado anteriormente, mas alterando a _**repoURL_** para o repositório privado criado.
+- Agora, basta criar um app utilizando o mesmo template utilizado anteriormente, mas alterando a _**repoURL**_ para o repositório privado criado.
 
 ```
 apiVersion: argoproj.io/v1alpha1
@@ -236,3 +269,4 @@ spec:
       - CreateNamespace=true
 ```
 
+### Após isso, concluímos todos os passos do projeto e tudo está devidamente configurado e funcionando corretamente.
