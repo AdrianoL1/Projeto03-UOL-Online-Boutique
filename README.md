@@ -13,7 +13,7 @@
 4. [Instalando ArgoCD no Cluster local](#4-instalando-argocd-no-cluster-local)
    - 4.1 [Acessar o ArgoCD localmente](#41-acessar-o-argocd-localmente)
 5. [Criar o App no ArgoCD](#5-criar-o-app-no-argocd)
-6. [Resultado final: Acessar o front-end](#6-acessar-o-front-end)
+6. [Resultado final: Acessar o front-end](#6-resultado-final-acessar-o-front-end)
 7. [EXTRAS: Modificar o arquivo online-boutique.yml e acessar e monitorar um repositório privado com ArgoCD](#7-extras-modificar-o-arquivo-online-boutiqueyml-e-acessar-e-monitorar-um-repositório-privado-com-argocd)
    - 7.1 [Modificar o arquivo online-boutique.yml](#71-modificar-o-arquivo-online-boutiqueyml)
    - 7.2 [Acessar e monitorar um repositório privado com ArgoCD](#72-acessar-e-monitorar-um-repositório-privado-com-argocd)
